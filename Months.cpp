@@ -2,58 +2,74 @@
 #include <iostream>
 using namespace std;
 
+enum months {
+    error = 0,
+    January = 1,
+    February,
+    March,
+        April,
+        May,
+            June,
+            July,
+            August,
+            September,
+                October,
+                November,
+                December,
+};
+
 int main()
 {
     setlocale(LC_ALL, "Russian");
-    int n;
+    int months;
     do {
         cout << "Введите номер месяца: ";
-        cin >> n;
+        cin >> months;
 
-        switch (n) {
-        case 0:
+        switch (months) {
+        case error:
             cout << "До свидания\n";
             break;
-        case 1:
+        case January:
             cout << "Январь\n";
             break;
-        case 2:
+        case February:
             cout << "Февраль\n";
             break;
-        case 3:
+        case March:
             cout << "Март\n";
             break;
-        case 4:
+        case April:
             cout << "Апрель\n";
             break;
-        case 5:
+        case May:
             cout << "Май\n";
             break;
-        case 6:
+        case June:
             cout << "Июнь\n";
             break;
-        case 7:
+        case July:
             cout << "Июль\n";
             break;
-        case 8:
+        case August:
             cout << "Август\n";
             break;
-        case 9:
+        case September:
             cout << "Сентябрь\n";
             break;
-        case 10:
+        case October:
             cout << "Октябрь\n";
             break;
-        case 11:
+        case November:
             cout << "Ноябрь\n";
             break;
-        case 12:
+        case December:
             cout << "Декабрь\n";
             break;
         default:
             cout << "Неправильный номер!\n";
             break;
         }
-    } while (n != 0);
+    } while (months != 0);
 }
 
